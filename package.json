@@ -1,0 +1,33 @@
+{
+  "name": "@daneroo/ir-logo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daneroo/ir-logo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daneroo/ir-logo/issues"
+  },
+  "homepage": "https://github.com/daneroo/ir-logo#readme",
+  "devDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
+}
