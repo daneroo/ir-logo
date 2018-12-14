@@ -1,5 +1,5 @@
 
 import colors from './colors'
-import xrobot from './xrobot'
+import XRobot from './xrobot'
 
-export { colors, xrobot }
+export { colors, XRobot }

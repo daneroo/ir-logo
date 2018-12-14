@@ -110,7 +110,7 @@ const Losange = ({ S = styles.purple, T, mask = '' }) => {
 //   <polygon points='0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50' />
 // )
 
-const Logo = ({ param }) => (
+const XRobot = ({ param }) => (
   <div style={{}} >
     <svg width='512' height='512'>
 
@@ -147,12 +147,12 @@ const Logo = ({ param }) => (
   </div>
 )
 
-Logo.propTypes = {
+XRobot.propTypes = {
   siteTitle: PropTypes.string
 }
 
-Logo.defaultProps = {
+XRobot.defaultProps = {
   siteTitle: ''
 }
 
-export default Logo
+export default XRobot
