@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { irdetoGreen } from './irdeto-colors'
+import { irdetoGreen } from './colors'
 
 const styles = {
   head: {
