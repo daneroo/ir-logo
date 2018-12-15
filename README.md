@@ -44,9 +44,10 @@ npm version patch
 npm publish
 ```
 
-To now
+To netlify:
+
 ```bash
-npm run docs
+npm run build
 # TODO now/github/netlify: publish .docz/dist directory
 ```
 
