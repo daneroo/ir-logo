@@ -4,10 +4,11 @@ This is some logo work for my teams exported as React Components
 
 ## Todo
 
-- Separate components
+- Separate components, refactor
 - Rasterize
 - Recreate old logos (PSaaS, Helium)
-- Import Legacy assets
+- Favicons
+- Publish to npm, netlify, now, gh-pages
 
 ## Usage
 
@@ -36,12 +37,15 @@ npm run dev # for live rendering of docz
 
 ## Publishing
 
+To npm:
+
 ```bash
-# npm
 npm version patch
 npm publish
+```
 
-# docz
+To now
+```bash
 npm run docs
 # TODO now/github/netlify: publish .docz/dist directory
 ```
