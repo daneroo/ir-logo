@@ -55,7 +55,7 @@ To get Jest to work with docz, I had to use
 npm i --save-dev @babel/core @babel/preset-env @babel/preset-react babel-core@7.0.0-bridge.0 babel-jest jest react-test-renderer
 
 # docz
-npm i --save-dev docz docz-theme-default
+npm i --save-dev docz docz-theme-default docz-plugin-svgr
 
 # react
 npm i --save-dev prop-types react react-dom

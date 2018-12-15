@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <title>Helium Logo</title>
+  <!--
+    Irdeto Purple  HEX #5D176A  RGB 93R.23G.106B
+    Irdeto Green   HEX #AEBF1E  RGB 174R.191G.30B
+
+    DONE(daneroo): 
+      - make layer a projection: (square, 45 deg rot, scale to match upper 120 deg of hexagon)
+      - clippath for hidden surface removal, tested with non white bg.
+      - preserve transparency in stack
+      - 3 layers is better visually
+
+  -->
+  <style>
+    .purple {
+      fill:none;
+      stroke: #5D176A;
+      stroke-width:40px;
+      stroke-linejoin:round;
+    }
+    .head {
+      <!-- fill:#5D176A; -->
+      fill:none;
+      stroke: #5D176A;
+      stroke-width:30px;
+      stroke-linejoin:round;
+    }
+    .purplefill {
+      fill:#5D176A;
+    }
+    .mouth {
+      fill:none;
+      stroke: #5D176A;
+      <!-- stroke: #AEBF1E; -->
+      stroke-width:20px;
+      stroke-linejoin:round;
+    }
+    .eye {
+      fill:#5D176A;
+      <!-- fill:#AEBF1E; -->
+    }
+    .whitemask {
+      fill:#fff;
+      stroke: #eee;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .blackmask {
+      fill:#000;
+      stroke: #000;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .green {
+      fill:#AEBF1E;
+      /*
+      stroke: #AEBF1E;
+      stroke-width:10px; 
+      stroke-linejoin:round;
+      */
+    }
+    #hex {
+      fill:none;
+      stroke-linejoin:round;
+      stroke-width:10px;
+    }
+    #outline {
+     /* 
+      fill: #ccc; 
+     */
+      fill:none; 
+      stroke-width: 2px;
+      stroke: #ccc;
+    }
+    .dropshadow {
+      stroke: #777;
+    }
+    .wholehex {
+      stroke: #fff;
+    }
+    .lefthex {
+      stroke: #eee;
+    }
+  </style>
+  <defs>
+    <filter id="dropshadow" x="-100%" y="-100%" width="250%" height="250%">
+      <feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+
+    <polygon id="head" points="-150,100, 150,100, 150,-100, -150,-100"/>
+
+    <path id="mouth" d="M-60,0 Q0,40 60,0" />
+    <circle id="eye" r="20" />
+
+    <polygon id="square" points="-100,100, 100,100, 100,-100, -100,-100"/>
+
+    <!-- projected square: matches outer hexagon-->
+    <g id= "losange" transform="scale(.707) scale(.866,.5) rotate(45)" >
+      <use xlink:href="#square"/>
+    </g>
+
+    <mask id="mask">
+      <!-- 100% opacity on layer being drawn (including fill) -->
+      <use xlink:href="#losange" class="whitemask"/>
+      <!-- 0% opacity on layer being removed (copy of itself shifted up by 40px) -->
+      <use xlink:href="#losange" transform="translate(0,-40)" class="blackmask"/>
+    </mask>
+
+    <!-- <rect x="-75" y="-60" width="150" height="50" stroke='red' fill="white"/> -->
+
+    <polygon id="hex" points="0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50"/>
+  </defs>
+
+
+
+<!-- <g id="outline" transform="translate(256,256) scale(2.56)" >
+  <use xlink:href="#square"/>
+</g> -->
+
+<g transform="translate(256,256) rotate(0)" >
+
+  <!-- Hex outline
+  <g id="hexComposed" transform="scale(2.0)" >
+    <use xlink:href="#hex" class="dropshadow" filter="url(#dropshadow)" />
+    <use xlink:href="#hex" class="wholehex"  />
+    <clipPath id="lefthalf">
+      <rect x="-120" y="-120" width="120" height="240" />
+    </clipPath>
+    <use xlink:href="#hex" class="lefthex" clip-path="url(#lefthalf)" />
+  </g>
+  -->
+
+  <!-- bottom up (left to right after rotation)-->
+  <g transform="scale(1.536) translate(0,60)" >
+    <!-- 3 elements: -50,0,50, 4 elements:  -50,-16,16,50-->
+    <g transform="scale(.75) translate(0,50)" >
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <!--3 layers-->
+    <g transform="scale(.85) translate(0,-5)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <!--4 layers-->
+    <!-- <g transform=" scale(.85,.85) translate(0,16.66)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <g transform="scale(.9) translate(0,-16.66)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g> -->
+    <g transform="scale(.95) translate(0, -50)" >
+      <use xlink:href="#losange" class="purple" />
+      <use xlink:href="#losange" class="green" transform="scale(.333) translate(100,0)"/>
+    </g>
+
+    <!-- head -->
+    <g transform=" translate(0, -150) scale(.45)" >
+      <use xlink:href="#head" class="head" />
+      <use xlink:href="#mouth" class="mouth" transform="translate( 0,30)" />
+
+      <use xlink:href="#eye" class="eye" transform="translate( 50,-20)"/>
+      <use xlink:href="#eye" class="eye" transform="translate(-50,-20)"/>
+    </g>
+
+  </g>
+
+</g>
+
+<!--
+<text id="Helium" transform="translate(256,500) scale(2)" font-family="monospace" font-size="40" text-anchor="middle">
+    Helium
+</text>
+-->
+
+</svg>

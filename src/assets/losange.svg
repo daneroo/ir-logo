@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <title>PSaaS Logo</title>
+  <style>
+    .outline {
+      fill:none;
+      stroke: #ccc;
+      stroke-width:2px;
+    }
+    .black {
+      fill:none;
+      stroke: #5D176A;
+      stroke-width:2px;
+    }
+    .red {
+      fill:none;
+      stroke: red;
+      stroke-width:1px;
+    }
+    .green {
+      fill:none;
+      stroke: #AEBF1E;
+      stroke-width:.5px;
+    }
+  </style>
+  <defs>
+    <polygon id="hex" points="0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50"/>
+    <polygon id="square" points="-100,100, 100,100, 100,-100, -100,-100"/>
+
+    <polygon id="losange" points="0,-100 86.6,-50 0 0 -86.6,-50"/>
+
+    <!-- projected square, which matches the hexagon -->
+    <g id= "proj" transform="scale(.707) scale(.866,.5) rotate(45)" >
+      <use xlink:href="#square"/>
+    </g>
+
+  </defs>
+
+
+
+<g id="outline" transform="translate(256,256) scale(2.56)" class="outline">
+  <use xlink:href="#square"/>
+</g>
+
+
+<g  transform="translate(256,256)" >
+
+  <circle cx="0" cy="0" r="100" class="black"/>
+
+  <g class="black">
+    <use xlink:href="#hex"/>
+  </g>
+
+  <!-- <g class="black" style="stroke:#eee" transform="translate(0,100)">
+    <use xlink:href="#losange"/>
+  </g> -->
+  <g class="black">
+    <use xlink:href="#square"/>
+  </g>
+
+  <g class="black">
+    <use xlink:href="#losange"/>
+  </g>
+
+  <g class="red" transform="translate(0,-50)">    
+    <use xlink:href="#proj"/>
+  </g>
+  <g class="red" transform="translate(0,50)">    
+    <use xlink:href="#proj"/>
+  </g>
+  <g class="red" transform="translate(0,0)">    
+    <use xlink:href="#proj"/>
+  </g>
+
+  <line x1="0" y1="0" x2="100" y2="0" class="green"/>
+  <line x1="86.6" y1="0" x2="86.6" y2="-50" class="green"/>
+  <line x1="0" y1="0" x2="0" y2="-43.3" class="green"/>
+  <line x1="0" y1="-50" x2="86.6" y2="-50" class="red"/>
+
+</g>
+
+
+</svg>

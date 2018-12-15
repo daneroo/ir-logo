@@ -1,0 +1,105 @@
+
+---
+name: Legacy
+---
+
+# Legacy
+
+import { Playground } from 'docz'
+import { Footer } from './footer'
+import irdetoPurpleUrl from './assets/irdeto_logos/png/irdeto_logo_rgb-purple.png';
+const padAndFLow={display: 'inline-block', padding: '1em'}
+const size={width:'200px'}
+
+import PsaaSUrl, { ReactComponent as PSaaS } from './assets/PSaaS/PSaaS.svg'
+import PsaaSSansUrl from './assets/PSaaS/PSaaS.sans.svg'
+import HeUrl from './assets/Helium/Helium.svg'
+import HeUrlSans from './assets/Helium/Helium.sans.svg'
+import He3Png from './assets/Helium/Helium-256.png'
+import He3SansPng from './assets/Helium/Helium.sans-256.png'
+import He4Png from './assets/Helium/Helium4-256.png'
+import He4SansPng from './assets/Helium/Helium4.sans-256.png'
+
+import XRobotUrl from './assets/XRobot/XRobot.full.svg'
+import XRoboSticktUrl from './assets/XRobot/XRobot.stick.svg'
+
+
+The previous incarnations of these logos were authored directly in SVG.
+
+## XRobot 
+
+Expandable Robot
+
+<div>
+  <img style={size} src={XRobotUrl} alt="XRobot" />
+  <img style={size} src={XRoboSticktUrl} alt="XRobot Stick" />
+</div>
+
+## Helium 
+
+Tracemark Traitor Tracing
+
+<table>
+  <tr>
+    <td>
+      Looks like a <b>Watermark</b> <br/>
+      <img style={size} src={He3SansPng} alt="He3.sans" />
+    </td>
+    <td>
+      Feels like a <b>Job Queue</b> <br/>
+      <img style={size} src={He3Png} alt="He3" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Another Variant <br/>
+      <img style={size} src={He4SansPng} alt="He4.sans" />
+    </td>
+    <td>
+      Another isotope <sup>4</sup>He <br/>
+      <img style={size} src={He3Png} alt="He4" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      As SVG <br/>
+      <img style={size} src={HeUrlSans} alt="He.sans" />
+    </td>
+    <td>
+      As SVG <br/>
+      <img style={size} src={HeUrl} alt="He" />
+    </td>
+  </tr>
+</table>
+
+
+## PSaaS 
+
+Platform Stack as a Service
+
+<div>
+  <img style={size} src={PsaaSUrl} alt="PSaaS" />
+  <img style={size} src={PsaaSSansUrl} alt="PSaaS.sans" />
+</div>
+
+
+They can be imported here both as images and as React components:
+
+<Playground>
+  <div>
+    <img style={{width:'150px'}} src={PsaaSUrl} alt="PSaaS" />
+    <PSaaS style={{width:'150px'}} />
+  </div>
+</Playground>
+
+<div style={{...padAndFLow, backgroundColor:'white'}}>
+  <div style={{...padAndFLow, backgroundColor:'white'}}>
+    <span><img style={{width:100}} src={irdetoPurpleUrl} alt="Irdeto Logo" /></span>
+  </div>
+</div>
+
+
+
+
+
+<Footer />
