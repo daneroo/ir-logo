@@ -4,11 +4,12 @@ This is some logo work for my teams exported as React Components
 
 ## Todo
 
+- Redirect for netlify
 - Separate components, refactor
 - Rasterize
 - Recreate old logos (PSaaS, Helium)
 - Favicons
-- Publish to npm, netlify, now, gh-pages
+- Publish to now, gh-pages
 
 ## Usage
 
