@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render a square 1`] = `
+<polygon
+  points="-100,100, 100,100, 100,-100, -100,-100"
+  style={Object {}}
+  transform=""
+/>
+`;

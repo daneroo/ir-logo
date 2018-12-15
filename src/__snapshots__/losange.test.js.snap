@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render a losange 1`] = `
+<g
+  mask=""
+  style={
+    Object {
+      "fill": "none",
+      "stroke": "#5D176A",
+      "strokeLinejoin": "round",
+      "strokeWidth": "40px",
+    }
+  }
+  transform=""
+>
+  <polygon
+    points="-100,100, 100,100, 100,-100, -100,-100"
+    style={Object {}}
+    transform="scale(.707) scale(.866,.5) rotate(45)"
+  />
+</g>
+`;

@@ -1,0 +1,42 @@
+---
+name: Square
+menu: Shapes
+---
+
+# Square
+
+import { Link } from 'docz'
+import { Playground } from 'docz'
+import Square from './square'
+import { styles } from './colors'
+
+## Just some squares
+
+<svg width='512' height='512'>
+  <g transform='translate(256,256)' >
+    <Square />
+  </g>
+</svg>
+
+## Now with style
+
+<svg width='512' height='512'>
+  <g transform='translate(256,256)' >
+    <Square S={styles.purple}/>
+  </g>
+</svg>
+
+<svg width='512' height='512'>
+  <g transform='translate(256,256)' >
+    <Square S={styles.green}/>
+  </g>
+</svg>
+
+<svg width='512' height='512'>
+  <g transform='translate(256,256)' >
+    <Square S={styles.purple}/>
+    <Square S={styles.green} T='scale(.33)'/>
+  </g>
+</svg>
+
+<Link to="/">Back to Overview</Link>

@@ -2,6 +2,13 @@
 
 This is some logo work for my teams exported as React Components
 
+## Todo
+
+- Separate components
+- Rasterize
+- Recreate old logos (PSaaS, Helium)
+- Import Legacy assets
+
 ## Usage
 
 ```bash

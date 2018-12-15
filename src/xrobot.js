@@ -1,44 +1,30 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { irdetoGreen } from './colors'
+import { styles as baseStyles, irdetoGreen, irdetoPurple } from './colors'
+import Losange from './losange'
 
 const styles = {
+  ...baseStyles,
+  fullPurple: {
+    ...baseStyles.purple,
+    fill: irdetoPurple
+  },
   head: {
-    fill: '#5D176A',
+    fill: irdetoPurple,
     // fill: 'none',
-    stroke: '#5D176A',
+    stroke: irdetoPurple,
     strokeWidth: '30px',
     strokeLinejoin: 'round'
   },
-  antenna: { fill: '#AEBF1E', stroke: '#5D176A', strokeWidth: '20px' },
-  eye: { fill: '#AEBF1E' },
+  antenna: { fill: irdetoGreen, stroke: irdetoPurple, strokeWidth: '20px' },
+  eye: { fill: irdetoGreen },
   mouth: {
     fill: 'none',
     // <!-- stroke: #5D176A; -->
-    stroke: '#AEBF1E',
+    stroke: irdetoGreen,
     strokeWidth: '20px',
     strokeLinejoin: 'round'
-  },
-  green: { fill: '#AEBF1E' },
-  purple: {
-    fill: '#5D176A',
-    stroke: '#5D176A',
-    strokeWidth: '40px',
-    strokeLinejoin: 'round'
-  },
-  whitemask: {
-    fill: '#fff',
-    stroke: '#fff',
-    strokeWidth: '50px',
-    strokeLinejoin: 'round'
-  },
-  blackmask: {
-    fill: '#000',
-    stroke: '#000',
-    strokeWidth: '50px',
-    strokeLinejoin: 'round'
   }
-
 }
 
 const Antenna = ({ T }) => {
@@ -92,19 +78,6 @@ const ReactLogo = ({ S = { fill: irdetoGreen }, T }) => {
     </g>
   )
 }
-const Square = ({ T }) => {
-  return (
-    <polygon points='-100,100, 100,100, 100,-100, -100,-100' transform={`${T}`} />
-  )
-}
-
-const Losange = ({ S = styles.purple, T, mask = '' }) => {
-  return (
-    <g style={S} transform={`${T}`} mask={mask}>
-      <Square T='scale(.707) scale(.866,.5) rotate(45)' />
-    </g>
-  )
-}
 
 // const Hex = () => (
 //   <polygon points='0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50' />
@@ -125,13 +98,13 @@ const XRobot = ({ param }) => (
 
         <g transform='scale(1.536) translate(0,70)' >
           <g transform='scale(.75) translate(0,50)' >
-            <Losange class='purple' mask='url(#mask)' />
+            <Losange S={styles.fullPurple} mask='url(#mask)' />
           </g>
           <g transform='scale(.85) translate(0,-3.5)'>
-            <Losange class='purple' mask='url(#mask)' />
+            <Losange S={styles.fullPurple} mask='url(#mask)' />
           </g>
           <g transform='scale(.95) translate(0, -50)' >
-            <Losange />
+            <Losange S={styles.fullPurple} />
             {/* Heart is a losange or a react logo */}
             {/* <Losange S={styles.green} T='scale(.333) translate(100,0)' /> */}
             <ReactLogo T='scale(1) translate(25,-10)' />
