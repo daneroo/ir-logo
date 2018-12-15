@@ -8,6 +8,22 @@ name: Colors
 import { irdetoPurple, irdetoGreen, reactBlue } from './colors'
 import { Link } from 'docz'
 import { Playground } from 'docz'
+import irdetoPurpleUrl from './assets/irdeto_logos/png/irdeto_logo_rgb-purple.png';
+import irdetoWhiteUrl from './assets/irdeto_logos/png/irdeto_logo_rgb-white.png';
+const padAndFLow={display: 'inline-block', padding: '1em'}
+
+We try to follow the [Irdeto branding guidelines](https://irdeto.com/irdeto-branding/)
+in doing this work.
+
+<div style={{...padAndFLow, backgroundColor:'white'}}>
+  <div style={{...padAndFLow, backgroundColor:'white'}}>
+    <span><img style={{width:100}} src={irdetoPurpleUrl} alt="Irdeto Logo" /></span>
+  </div>
+
+  <div style={{...padAndFLow, backgroundColor:irdetoPurple}}>
+    <span ><img style={{width:100}} src={irdetoWhiteUrl} alt="Irdeto Logo" /></span>
+  </div>
+</div>
 
 <Playground>
   <div style={{color:irdetoPurple}}>
