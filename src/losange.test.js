@@ -1,4 +1,3 @@
-// Link.react.test.js
 import React from 'react'
 import Losange from './losange'
 import renderer from 'react-test-renderer'
