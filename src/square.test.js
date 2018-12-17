@@ -1,4 +1,3 @@
-// Link.react.test.js
 import React from 'react'
 import Square from './square'
 import renderer from 'react-test-renderer'

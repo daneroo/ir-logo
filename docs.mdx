@@ -5,10 +5,13 @@ route: /
 
 # Overview
 
+import { Link } from 'docz'
+import { Footer } from './src/footer'
 import { Download } from './src/download'
 
 <Download size={256}/>
 
+<Link to='/src-download'><i>See Download page for other sizes</i></Link>
 
 ## TL;DR
 > Is this is the coolest thing ever?
@@ -25,3 +28,5 @@ The content is a mix of previous playful artwork for team logos.
 They were originally authored in `svg`, and rasterized into `png`.
 
 The React components are tested with snapshots with Jest.
+
+<Footer />

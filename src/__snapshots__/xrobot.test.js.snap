@@ -48,10 +48,10 @@ exports[`Render an expandable robot 1`] = `
     </mask>
   </defs>
   <g
-    transform="translate(64,64) scale(0.5,0.5)"
+    transform="scale(0.5,0.5)"
   >
     <g
-      transform="translate(128,128)"
+      transform="translate(256, 256)"
     >
       <g
         transform="scale(1.536) translate(0,70)"

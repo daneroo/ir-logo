@@ -94,9 +94,8 @@ const XRobot = ({ size = 256 }) => (
     </defs>
 
     {/* thistranslate is wrong, and 0 for size=512 */}
-    <g transform={`translate(${64},${64}) scale(${size / 512},${size / 512})`} >
-      <g transform={`translate(${size / 2},${size / 2})`} >
-
+    <g transform={`scale(${size / 512},${size / 512})`} >
+      <g transform='translate(256, 256)' >
         <g transform='scale(1.536) translate(0,70)' >
           <g transform='scale(.75) translate(0,50)' >
             <Losange S={styles.fullPurple} mask='url(#mask)' />
@@ -113,10 +112,6 @@ const XRobot = ({ size = 256 }) => (
 
           <WholeHead T='translate(0, -140) scale(.40)' />
         </g>
-
-        {/* <path d={`M${-size / 4},${-size / 4} ${size / 4},${size / 4}`} style={{ stroke: 'red' }} />
-        <path d={`M${size / 4},${-size / 4} ${-size / 4},${size / 4}`} style={{ stroke: 'green' }} /> */}
-
       </g>
 
     </g>
