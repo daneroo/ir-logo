@@ -1,5 +1,8 @@
 # ir-logo
 
+<!-- Badges -->
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 This is some logo work for my teams exported as React Components
 
 ## Todo
