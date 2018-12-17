@@ -1,29 +1,14 @@
 import React from 'react'
-import Square from './square'
+import XRobot from './xrobot'
 
-export const Download = () => {
-  function toURI (inner, sz) {
-    const svg = `<svg 
-xmlns="http://www.w3.org/2000/svg" 
-xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
-x="0px" y="0px" 
-viewBox="0 0 ${sz} ${sz}" 
-enable-background="new 0 0 200 200" 
-xml:space="preserve" 
-height="${sz}" width="${sz}">
-${inner}
-</svg>`
-    const dataURI = 'data:image/svg+xml;utf8,' + svg
-    return dataURI
-  }
-
-  function download (elt, size) {
-    const svgname = 'coco.svg'
+export const Download = ({ size = 512 }) => {
+  function download (dataURI, size) {
+    const svgname = 'XRobot.svg'
     const pngname = svgname.replace('.svg', '-' + size + '.png')
 
     //  make an new image from the svg (must set both width and height)
     var img = document.createElement('img')
-    img.src = elt.src
+    img.src = dataURI
     img.setAttribute('width', '' + size)
     img.setAttribute('height', '' + size)
 
@@ -42,35 +27,42 @@ ${inner}
     }
   }
 
+  function toURI (inner, sz) {
+    const svg = `<svg 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
+x="0px" y="0px" 
+viewBox="0 0 ${sz} ${sz}" 
+enable-background="new 0 0 200 200" 
+xml:space="preserve" 
+height="${sz}" width="${sz}">
+${inner}
+</svg>`
+    const dataURI = 'data:image/svg+xml;utf8,' + svg
+    return dataURI
+  }
+
   function rasterize (e) {
+    console.log({ size })
     e.preventDefault()
     const target = e.target
-    console.log({ e, target })
-    const src = document.querySelector('#src')
-    const svg = src.outerHTML
+    const svgNode = target.parentNode.querySelector('svg')
+    if (!svgNode) {
+      console.error(new Error('Cannor find svg node'))
+      return
+    }
+    const svg = svgNode.outerHTML
     console.log({ svg })
-    // const dataURI = 'data:image/svg+xml;utf8,' + svg
-    // const dataURI = 'data:image/svg+xml;base64,' + window.btoa(svg)
-    // const square = '<g transform="scale(.5) translate(128,128)"><polygon points="-100,100, 100,100, 100,-100, -100,-100" transform=""></polygon></g>'
-    const dataURI = toURI(svg, 256)
+    const dataURI = toURI(svg, size)
 
     console.log({ dataURI })
-    const dst = document.querySelector('#dst')
-    dst.src = dataURI
-    dst.src = dataURI
 
-    download(dst, 256)
+    download(dataURI, size)
   }
 
   return (
     <div>
-      <svg id='src' style={{ border: '1px solid red' }} width='256' height='256'>
-        <g transform='translate(128,128)' >
-          <Square />
-        </g>
-      </svg>
-      <img id='dst' src='https://via.placeholder.com/256' />
-
+      <XRobot size={size} />
       <br />
       <button onClick={rasterize}>Download</button>
     </div>

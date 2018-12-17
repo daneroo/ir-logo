@@ -1,57 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render an expandable robot 1`] = `
-<div
-  style={Object {}}
+<svg
+  height={256}
+  width={256}
 >
-  <svg
-    height="512"
-    width="512"
-  >
-    <defs>
-      <mask
-        id="mask"
+  <defs>
+    <mask
+      id="mask"
+    >
+      <g
+        mask=""
+        style={
+          Object {
+            "fill": "#fff",
+            "stroke": "#fff",
+            "strokeLinejoin": "round",
+            "strokeWidth": "50px",
+          }
+        }
+        transform=""
       >
-        <g
-          mask=""
-          style={
-            Object {
-              "fill": "#fff",
-              "stroke": "#fff",
-              "strokeLinejoin": "round",
-              "strokeWidth": "50px",
-            }
+        <polygon
+          points="-100,100, 100,100, 100,-100, -100,-100"
+          style={Object {}}
+          transform="scale(.707) scale(.866,.5) rotate(45)"
+        />
+      </g>
+      <g
+        mask=""
+        style={
+          Object {
+            "fill": "#000",
+            "stroke": "#000",
+            "strokeLinejoin": "round",
+            "strokeWidth": "50px",
           }
-          transform=""
-        >
-          <polygon
-            points="-100,100, 100,100, 100,-100, -100,-100"
-            style={Object {}}
-            transform="scale(.707) scale(.866,.5) rotate(45)"
-          />
-        </g>
-        <g
-          mask=""
-          style={
-            Object {
-              "fill": "#000",
-              "stroke": "#000",
-              "strokeLinejoin": "round",
-              "strokeWidth": "50px",
-            }
-          }
-          transform="translate(0,-40)"
-        >
-          <polygon
-            points="-100,100, 100,100, 100,-100, -100,-100"
-            style={Object {}}
-            transform="scale(.707) scale(.866,.5) rotate(45)"
-          />
-        </g>
-      </mask>
-    </defs>
+        }
+        transform="translate(0,-40)"
+      >
+        <polygon
+          points="-100,100, 100,100, 100,-100, -100,-100"
+          style={Object {}}
+          transform="scale(.707) scale(.866,.5) rotate(45)"
+        />
+      </g>
+    </mask>
+  </defs>
+  <g
+    transform="translate(64,64) scale(0.5,0.5)"
+  >
     <g
-      transform="translate(256,256)"
+      transform="translate(128,128)"
     >
       <g
         transform="scale(1.536) translate(0,70)"
@@ -205,6 +205,6 @@ exports[`Render an expandable robot 1`] = `
         </g>
       </g>
     </g>
-  </svg>
-</div>
+  </g>
+</svg>
 `;

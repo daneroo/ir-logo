@@ -83,18 +83,19 @@ const ReactLogo = ({ S = { fill: irdetoGreen }, T }) => {
 //   <polygon points='0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50' />
 // )
 
-const XRobot = ({ param }) => (
-  <div style={{}} >
-    <svg width='512' height='512'>
+const XRobot = ({ size = 256 }) => (
+  <svg width={size} height={size}>
 
-      <defs>
-        <mask id='mask'>
-          <Losange S={styles.whitemask} />
-          <Losange S={styles.blackmask} T='translate(0,-40)' />
-        </mask>
-      </defs>
+    <defs>
+      <mask id='mask'>
+        <Losange S={styles.whitemask} />
+        <Losange S={styles.blackmask} T='translate(0,-40)' />
+      </mask>
+    </defs>
 
-      <g transform='translate(256,256)' >
+    {/* thistranslate is wrong, and 0 for size=512 */}
+    <g transform={`translate(${64},${64}) scale(${size / 512},${size / 512})`} >
+      <g transform={`translate(${size / 2},${size / 2})`} >
 
         <g transform='scale(1.536) translate(0,70)' >
           <g transform='scale(.75) translate(0,50)' >
@@ -111,13 +112,15 @@ const XRobot = ({ param }) => (
           </g>
 
           <WholeHead T='translate(0, -140) scale(.40)' />
-
         </g>
+
+        {/* <path d={`M${-size / 4},${-size / 4} ${size / 4},${size / 4}`} style={{ stroke: 'red' }} />
+        <path d={`M${size / 4},${-size / 4} ${-size / 4},${size / 4}`} style={{ stroke: 'green' }} /> */}
 
       </g>
 
-    </svg>
-  </div>
+    </g>
+  </svg>
 )
 
 XRobot.propTypes = {

@@ -7,8 +7,9 @@ This is some logo work for my teams exported as React Components
 
 ## Todo
 
-- Redirect for netlify
-- CI, and coverage
+- Fix scaling math for XRobot
+- Refactor downloads.js
+- CI, and coverage (codeclimate,coveralls,travis,circle,actions)
 - Separate components, refactor
 - Favicons
 - Publish to now, gh-pages
