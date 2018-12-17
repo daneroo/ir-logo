@@ -8,9 +8,8 @@ This is some logo work for my teams exported as React Components
 ## Todo
 
 - Redirect for netlify
+- CI, and coverage
 - Separate components, refactor
-- Rasterize
-- Recreate old logos (PSaaS, Helium)
 - Favicons
 - Publish to now, gh-pages
 
@@ -33,51 +32,62 @@ const MyComponent = () => (
 ## Developing
 
 ```bash
-npm run test -- --watch # for continuous testing
+npm run unit # for continuous testing
 
 npm run dev # for live rendering of docz
-
 ```
 
 ## Publishing
 
-To npm:
+We publish both the package as an es6 module, and a docz site on netlify.
+_For now tests are not under CI_
+
+## To npm
 
 ```bash
 npm version patch
 npm publish
 ```
 
-To netlify:
+## To netlify
+
+This is wired up un netlify for CD.
+_There is a netlyfy.toml config which account for 404 on missing routes_
+
+Also the `.nvmrc` select the node version for netliy build
 
 ```bash
+# on commit to master branch
 npm run build
-# TODO now/github/netlify: publish .docz/dist directory
+# deploy .docz/dist
 ```
 
 ## Dependencies Setup
 
-To get Jest to work with docz, I had to use
+After subtle issues around babrl 6/7 dependencies, I restarted with `create-react-app`. Then removed the `App`, added swapped `eslint` for standard, and added `jest` and `docz` (`mdx`).
 
 ```bash
+# Standard for linting 
+npm i --save-dev standard
+
 # Jest
-npm i --save-dev @babel/core @babel/preset-env @babel/preset-react babel-core@7.0.0-bridge.0 babel-jest jest react-test-renderer
+npm i --save-dev jest react-test-renderer
 
 # docz
 npm i --save-dev docz docz-theme-default docz-plugin-svgr
-
-# react
-npm i --save-dev prop-types react react-dom
-
-# for linting
-npm i --save-dev standard
 ```
 
-Also had to use the following `.babelrc`:
+### `package.json` config for linting:
 
 ```js
-{
-  "presets": ["@babel/preset-env", "@babel/preset-react"]
-}
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
 ```
 
+### `doczsrc.js` config for docz/mdx
+
+- Override title, description.
+- Create initial top level `docs.mdx`
