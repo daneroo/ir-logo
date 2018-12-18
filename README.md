@@ -7,6 +7,7 @@ This is some logo work for my teams exported as React Components
 
 ## Todo
 
+- Remove nested svg tag in Download for XRobot
 - Refactor downloads.js
 - CI, and coverage (codeclimate,coveralls,travis,circle,actions)
 - Separate components, refactor
