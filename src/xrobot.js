@@ -93,7 +93,6 @@ const XRobot = ({ size = 256 }) => (
       </mask>
     </defs>
 
-    {/* thistranslate is wrong, and 0 for size=512 */}
     <g transform={`scale(${size / 512},${size / 512})`} >
       <g transform='translate(256, 256)' >
         <g transform='scale(1.536) translate(0,70)' >
@@ -107,7 +106,7 @@ const XRobot = ({ size = 256 }) => (
             <Losange S={styles.fullPurple} />
             {/* Heart is a losange or a react logo */}
             {/* <Losange S={styles.green} T='scale(.333) translate(100,0)' /> */}
-            <ReactLogo T='scale(1) translate(25,-10)' />
+            <ReactLogo T='scale(1.7) translate(15,-10)' />
           </g>
 
           <WholeHead T='translate(0, -140) scale(.40)' />
