@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import XRobot from './xrobot'
 
-export const Download = ({ size = 512 }) => {
+export const Download = ({ size = 512, renderSize = 256 }) => {
+  const [renderSz, setRenderSz] = useState(renderSize)
+
   function download (dataURI, size) {
     const svgname = 'XRobot.svg'
     const pngname = svgname.replace('.svg', '-' + size + '.png')
@@ -38,33 +41,47 @@ xml:space="preserve"
 height="${sz}" width="${sz}">
 ${inner}
 </svg>`
-    const dataURI = 'data:image/svg+xml;utf8,' + svg
+
+    //  as utf8
+    // const dataURI = 'data:image/svg+xml;utf8,' + svg
+    // as base64
+    const dataURI = 'data:image/svg+xml;base64,' + window.btoa(svg)
     return dataURI
   }
 
   function rasterize (e) {
-    console.log({ size })
     e.preventDefault()
     const target = e.target
-    const svgNode = target.parentNode.querySelector('svg')
+    const svgNode = target.parentNode.parentNode.querySelector('svg')
     if (!svgNode) {
       console.error(new Error('Cannor find svg node'))
       return
     }
     const svg = svgNode.outerHTML
     console.log({ svg })
-    const dataURI = toURI(svg, size)
+    const dataURI = toURI(svg, renderSz)
 
     console.log({ dataURI })
 
-    download(dataURI, size)
+    download(dataURI, renderSz)
+  }
+
+  function selectSize (e) {
+    setRenderSz(e.target.value)
   }
 
   return (
-    <div>
+    <div style={{ display: 'inline-block' }}>
       <XRobot size={size} />
       <br />
-      <button onClick={rasterize}>Download</button>
+      <div style={{ textAlign: 'center' }}>
+        <select value={renderSz} onChange={selectSize}>
+          {[5, 6, 7, 8, 9, 10].map(i => {
+            return <option key={i} value={1 << i}>{`${1 << i}px`}</option>
+          }) }
+        </select>
+        <button onClick={rasterize} >Download</button>
+      </div>
     </div>
   )
 }
