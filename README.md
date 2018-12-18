@@ -55,12 +55,12 @@ npm publish
 This is wired up un netlify for CD.
 _There is a netlyfy.toml config which account for 404 on missing routes_
 
-Also the `.nvmrc` select the node version for netliy build
+Also the `.nvmrc` selects the node version for netliy build
 
 ```bash
-# on commit to master branch
-npm run build
-# deploy .docz/dist
+# On commit to master branch
+npm test && npm run build
+# Then deploy .docz/dist
 ```
 
 ## Dependencies Setup

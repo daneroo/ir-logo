@@ -9,7 +9,15 @@ import { Playground } from 'docz'
 import { Footer } from './footer'
 import { Download } from './download'
 
-This is how we rasterize.
+_Select a size, and Click on Download button below to try it._
+
+This is how we rasterize:
+- The SVG is rendered as a React component
+- The innerHTML of the component is fetched
+- Content is transform into a base64 encoded [data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- Create a new DOM Image: `<img src=""data:image/svg+xml;base64,PHN2ZyA..."`
+- Re-render image into a canvas.
+- Dowload is triggerd with a clisk event.
 
 <Download size={512}/>
 
