@@ -93,7 +93,7 @@ const XRobot = ({ size = 256 }) => (
       </mask>
     </defs>
 
-    <g transform={`scale(${size / 512},${size / 512})`} >
+    <g transform={`scale(${size / 512})`} >
       <g transform='translate(256, 256)' >
         <g transform='scale(1.536) translate(0,70)' >
           <g transform='scale(.75) translate(0,50)' >
