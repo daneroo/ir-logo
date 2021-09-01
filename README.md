@@ -9,7 +9,9 @@ This is some logo work for my teams exported as React Components.
 ## TODO
 
 - Republish npm package and docz site as is node:v11.4 (netlify)
-  - Update node:v12,v14 - republish npm
+  - Update node:v12
+  - Update node:v14
+  - republish npm
   - Update to current docz
 - Historical cleanup
   - Added history to this README
