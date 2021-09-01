@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Link } from 'docz'
 
@@ -10,7 +9,7 @@ export const Footer = () => {
       <small>
         <Link to='/'>Back to Overview</Link>
         <div style={{ float: 'right' }}>
-          &copy; Copyright 2018 &nbsp;
+          &copy; Copyright 2018-2021 &nbsp;
           <a href='https://github.com/daneroo/'>@daneroo</a>
         </div>
       </small>
