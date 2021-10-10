@@ -8,11 +8,14 @@ This is some logo work for my teams exported as React Components.
 
 ## TODO
 
+- Move to learna/docusaurus
+  - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
+  - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)
 - Republish npm package and docz site as is node:v11.4 (netlify)
   - Update node:v12
   - Update node:v14
-  - republish npm
   - Update to current docz
+  - Republish npm
 - Historical cleanup
   - Added history to this README
   - Move [helium-logo on gitlab](https://gitlab.com/daneroo/helium-xrobot-logo) back to github.
@@ -27,7 +30,7 @@ This is some logo work for my teams exported as React Components.
 ## Usage
 
 ```bash
-npm install @danero/ir-logo
+npm install @daneroo/ir-logo
 ```
 
 ```js
@@ -63,9 +66,9 @@ npm publish
 ### To netlify
 
 This is wired up un netlify for CD.
-_There is a netlyfy.toml config which account for 404 on missing routes_
+_There is a netlify.toml config which account for 404 on missing routes_
 
-Also the `.nvmrc` selects the node version for netliy build
+Also the `.nvmrc` selects the node version for netlify build
 
 ```bash
 # On commit to master branch
@@ -88,7 +91,7 @@ npm i --save-dev jest react-test-renderer
 npm i --save-dev docz docz-theme-default docz-plugin-svgr
 ```
 
-### `package.json` config for linting:
+### `package.json` config for linting
 
 ```js
   "standard": {
