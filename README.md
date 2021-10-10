@@ -35,20 +35,10 @@ This is some logo work for my teams exported as React Components.
 - Favicons
 - Publish to vercel, gh-pages
 
-## Usage
+## tl;dr
 
 ```bash
-npm install @daneroo/ir-logo
-```
-
-```js
-import { XRobot } from "@daneroo/ir-logo";
-
-const MyComponent = () => (
-  <div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
-    <XRobot />
-  </div>
-);
+lerna bootstrap
 ```
 
 ## Operations
@@ -59,7 +49,7 @@ const MyComponent = () => (
 
 ```bash
 npm i lerna -g ## or prepend lerna commands with npx
-lerna bootstrap --hoist
+lerna bootstrap #  optionally --hoist
 
 npm test  # or
 lerna run test
@@ -87,8 +77,7 @@ sections to `package.json`
 
 ```bash
 lerna create <name> [loc]
-lerna create @daneroo/error error
-lerna create @daneroo/logger logger
+lerna create @daneroo/ir-logo-helium ir-logo-helium
 # and add common devDeps as below
 ```
 
@@ -103,7 +92,7 @@ lerna add standard --dev
 # single package - not shared
 lerna add winston packages/logger --dev
 lerna add express packages/server --dev
-# tyhen add as peerD
+# then add as peerD?
 ```
 
 ## Initial Setup

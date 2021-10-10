@@ -1,6 +1,11 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "clean":"lerna clean --yes && echo now you can: rm -rf $(find packages -name coverage)",
+    "unit":"lerna run unit --concurrency 1 --stream",
+    "test": "lerna run test"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }
