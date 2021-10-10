@@ -1,6 +1,7 @@
 # ir-logo
 
 <!-- Badges -->
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
@@ -8,9 +9,16 @@ This is some logo work for my teams exported as React Components.
 
 ## TODO
 
-- Move to learna/docusaurus
+- Move to lerna/docusaurus
   - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
   - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)
+  - reproduce legacy site (local)
+  - move master to main
+  - lerna init
+  - docusaurus for site package
+  - extract old components from legacy and put in separate packages folder
+  - remove legacy
+
 - Republish npm package and docz site as is node:v11.4 (netlify)
   - Update node:v12
   - Update node:v14
@@ -43,68 +51,69 @@ const MyComponent = () => (
 );
 ```
 
-## Developing
+## Operations
+
+- See lerna docs
+- netlify for the site: actions or hooks on netlify
+- npm for public packages
 
 ```bash
-npm run unit # for continuous testing
+npm i lerna -g ## or prepend lerna commands with npx
+lerna bootstrap --hoist
 
-npm run dev # for live rendering of docz
+npm test  # or
+lerna run test
+
+# to see verbose test output
+npm run test -- --concurrency 1 --stream  # or
+lerna run test --concurrency 1 --stream
+
+# make your commits and push...
+
+npm login # you may have to login to npm
+lerna publish
+
+# less typical
+lerna version # interactive
+lerna minor # [major | minor | patch | premajor | preminor | prepatch | prerelease]
+
+lerna clean --yes # rm node_modules
 ```
 
-## Publishing
+## Creating a new package
 
-We publish both the package as an es6 module, and a docz site on netlify.
-_For now tests are not under CI_
-
-### To npm
+After you create the package, add `scripts:`, `devDependencies:`, and `standrad:`
+sections to `package.json`
 
 ```bash
-npm version patch
-npm publish
+lerna create <name> [loc]
+lerna create @daneroo/error error
+lerna create @daneroo/logger logger
+# and add common devDeps as below
 ```
 
-### To netlify
+## Adding (shared) dev dependancies
 
-This is wired up un netlify for CD.
-_There is a netlify.toml config which account for 404 on missing routes_
-
-Also the `.nvmrc` selects the node version for netlify build
+If it is a peerDependancy, add by hand, and add as a devdependancy
 
 ```bash
-# On commit to master branch
-npm test && npm run build
-# Then deploy .docz/dist
+lerna add jest --dev
+lerna add standard --dev
+
+# single package - not shared
+lerna add winston packages/logger --dev
+lerna add express packages/server --dev
+# tyhen add as peerD
 ```
 
-## Dependencies Setup
+## Initial Setup
 
-After subtle issues around babel 6/7 dependencies, I restarted with `create-react-app`. Then removed the `App`, added swapped `eslint` for standard, and added `jest` and `docz` (`mdx`).
+See [my first lerna try with foundations](https://github.com/daneroo/foundations)
 
 ```bash
-# Standard for linting
-npm i --save-dev standard
-
-# Jest
-npm i --save-dev jest react-test-renderer
-
-# docz
-npm i --save-dev docz docz-theme-default docz-plugin-svgr
+npx lerna init
 ```
 
-### `package.json` config for linting
-
-```js
-  "standard": {
-    "env": {
-      "jest": true
-    }
-  }
-```
-
-### `doczsrc.js` config for docz/mdx
-
-- Override title, description.
-- Create initial top level `docs.mdx`
 
 ## History
 
@@ -114,3 +123,4 @@ npm i --save-dev docz docz-theme-default docz-plugin-svgr
   - will move back to github/daneroo/helium-logo
 - 2018-12-12 XRobot - eXtensible Robot - Team name for LSA Work. originaly in a gatsby site in helium-logo/xrobot
 - 2018-12-14 Started consolidating every thing into ir-logo (this repo) as a npm module for a react component, as well as a docz site.
+- 2021-10-10 Move to lerna and docusaurus
