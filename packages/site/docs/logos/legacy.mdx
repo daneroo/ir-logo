@@ -5,17 +5,9 @@ sidebar_position: 3
 # Legacy
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-import irdetoPurpleUrl from '@site/static/img/irdeto_logos/png/irdeto_logo_rgb-purple.png';
 const padAndFLow={display: 'inline-block', padding: '1em'}
 const size={width:'200px'}
 
-import irdetoWhiteUrl from '@site/static/img/irdeto_logos/png/irdeto_logo_rgb-white.png';
-
-import He3Png from '@site/static/img/Helium/Helium-256.png'
-import He3SansPng from '@site/static/img/Helium/Helium.sans-256.png'
-import He4Png from '@site/static/img/Helium/Helium4-256.png'
-import He4SansPng from '@site/static/img/Helium/Helium4.sans-256.png'
 
 import XRobotSVG from '@site/static/img/XRobot/XRobot.svg'
 
@@ -42,25 +34,26 @@ Expandable Robot
 
 Tracemark Traitor Tracing
 
+
 <table>
   <tr>
     <td>
       Looks like a <b>Watermark</b> <br/>
-      <img style={size} src={He3SansPng} alt="He3.sans" />
+      <img style={size} src={useBaseUrl('img/Helium/Helium.sans-256.png')} alt="He3.sans" />
     </td>
     <td>
       Feels like a <b>Job Queue</b> <br/>
-      <img style={size} src={He3Png} alt="He3" />
+      <img style={size} src={useBaseUrl('img/Helium/Helium-256.png')} alt="He3" />
     </td>
   </tr>
   <tr>
     <td>
       Another Variant <br/>
-      <img style={size} src={He4SansPng} alt="He4.sans" />
+      <img style={size} src={useBaseUrl('img/Helium/Helium4.sans-256.png')} alt="He4.sams" />
     </td>
     <td>
       Another isotope <sup>4</sup>He <br/>
-      <img style={size} src={He3Png} alt="He4" />
+      <img style={size} src={useBaseUrl('img/Helium/Helium4-256.png')} alt="He4" />
     </td>
   </tr>
   <tr>
@@ -89,6 +82,7 @@ Platform Stack as a Service
 ## Irdeto
 <div style={{...padAndFLow, backgroundColor:'white'}}>
   <div style={{...padAndFLow, backgroundColor:'white'}}>
-    <span><img style={{width:100}} src={irdetoPurpleUrl} alt="Irdeto Logo" /></span>
+    <span><img style={{width:100}} src={useBaseUrl('img/irdeto_logos/png/irdeto_logo_rgb-purple.png')} alt="Irdeto Logo" /></span>
   </div>
 </div>
+

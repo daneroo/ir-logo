@@ -3,13 +3,25 @@
  * and scoped locally.
  */
 
+ .containerFlex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* align-content: space-between; */
+   gap: var(--ifm-spacing-horizontal)
+ }
+
+.heroLeftImage {
+  height: 200px;
+  width: 200px;
+}
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(
-    /* to bottom right, */
+  /* background-image: linear-gradient(
+    / * to bottom right, * /
     45deg,
     #341f69,
     #49236b,
@@ -23,7 +35,19 @@
     #cf6254,
     #d77548,
     #d98a3d
-  );
+  ); */
+  background-size: cover;
+  background-position: left;
+  /* background-position: top; */
+  /* background-position: bottom; */
+  /* background-position: right 300px bottom 100px; */
+  /* background-position: top -110px; */
+  
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Iris_versicolor_3.jpg/1024px-Iris_versicolor_3.jpg"); */
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Iris_versicolor_4.jpg/1024px-Iris_versicolor_4.jpg"); */
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Iris_versicolor_%285835374590%29.jpg/1024px-Iris_versicolor_%285835374590%29.jpg"); */
+  /* background-image: url("/img/Iris/Iris_versicolor_5835374590.jpeg"); */
+  /* background-image: url("/img/Iris/Iris_versicolor_3.jpeg"); */
 }
 
 @media screen and (max-width: 966px) {

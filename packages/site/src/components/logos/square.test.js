@@ -6,6 +6,6 @@ test('Render a square', () => {
   const component = renderer.create(
     <Square />
   )
-  let tree = component.toJSON()
+  const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })

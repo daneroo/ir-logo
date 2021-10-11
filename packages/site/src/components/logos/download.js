@@ -10,7 +10,7 @@ export const Download = ({ size = 512, initialRenderSize = 256 }) => {
     const pngname = svgname.replace('.svg', '-' + size + '.png')
 
     //  make an new image from the svg (must set both width and height)
-    var img = document.createElement('img')
+    const img = document.createElement('img')
     img.src = dataURI
     img.setAttribute('width', '' + size)
     img.setAttribute('height', '' + size)
@@ -18,12 +18,12 @@ export const Download = ({ size = 512, initialRenderSize = 256 }) => {
     img.onload = function () {
       console.log('  download ->', pngname, img.width, 'x', img.height)
 
-      var can = document.createElement('canvas')
+      const can = document.createElement('canvas')
       can.height = img.height
       can.width = img.width
       can.getContext('2d').drawImage(img, 0, 0)
 
-      var a = document.createElement('a')
+      const a = document.createElement('a')
       a.download = pngname
       a.href = can.toDataURL('image/png').replace(/^data:image\/[^;]/, 'data:application/octet-stream')
       a.click()
@@ -83,9 +83,9 @@ height="${renderSize}" width="${renderSize}">
         <select value={renderSize} onChange={selectSize}>
           {[5, 6, 7, 8, 9, 10].map(i => {
             return <option key={i} value={1 << i}>{`${1 << i}px`}</option>
-          }) }
+          })}
         </select>
-        <button onClick={rasterize} >Download</button>
+        <button onClick={rasterize}>Download</button>
       </div>
     </div>
   )

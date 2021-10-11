@@ -6,6 +6,6 @@ test('Render a losange', () => {
   const component = renderer.create(
     <Losange />
   )
-  let tree = component.toJSON()
+  const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })

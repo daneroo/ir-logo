@@ -93,16 +93,16 @@ const XRobot = ({ size = 256 }) => (
       </mask>
     </defs>
 
-    <g transform={`scale(${size / 512})`} >
-      <g transform='translate(256, 256)' >
-        <g transform='scale(1.536) translate(0,70)' >
-          <g transform='scale(.75) translate(0,50)' >
+    <g transform={`scale(${size / 512})`}>
+      <g transform='translate(256, 256)'>
+        <g transform='scale(1.536) translate(0,70)'>
+          <g transform='scale(.75) translate(0,50)'>
             <Losange S={styles.fullPurple} mask='url(#mask)' />
           </g>
           <g transform='scale(.85) translate(0,-3.5)'>
             <Losange S={styles.fullPurple} mask='url(#mask)' />
           </g>
-          <g transform='scale(.95) translate(0, -50)' >
+          <g transform='scale(.95) translate(0, -50)'>
             <Losange S={styles.fullPurple} />
             {/* Heart is a losange or a react logo */}
             {/* <Losange S={styles.green} T='scale(.333) translate(100,0)' /> */}

@@ -9,6 +9,12 @@ This is some logo work for my teams exported as React Components.
 
 ## TODO
 
+- Make an [IRIS logo](http://content.codecademy.com/programs/machine-learning/k-means/iris.svg) from [Codecademy machine learning class](https://www.codecademy.com/learn/machine-learning/modules/dspath-clustering)
+  - [Wiki Media Image](https://commons.wikimedia.org/wiki/File:Iris_versicolor_3.jpg)
+  - [Wiki Media Image 2](https://commons.wikimedia.org/wiki/File:Iris_versicolor_4.jpg)
+  - [Wiki Media Image 3](https://commons.wikimedia.org/wiki/File:Iris_versicolor_(5835374590).jpg)
+  - [Wiki Media Image 4](https://commons.wikimedia.org/wiki/File:Iris_versicolor_Quebec_2.jpg)
+  - [Unsplash Search](https://unsplash.com/s/photos/iris)
 - Move to lerna/docusaurus
   - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
   - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)
@@ -16,10 +22,11 @@ This is some logo work for my teams exported as React Components.
   - move master to main
   - [x] lerna init
   - [x] docusaurus for site package
-    - configure / style from iris experiment
-    - replace some of my pages from legacy
-    - cleanup initial pages
+    - [x] configure / style from iris experiment
+    - [x] replace some of my pages from legacy
+    - [x] cleanup initial pages
   - extract old components from legacy and put in separate packages folder
+    - actually, removing docz stuff from legacy, makes it publishable?
   - remove legacy
 
 - Republish npm package and docz site as is node:v11.4 (netlify)
