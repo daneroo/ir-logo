@@ -12,10 +12,13 @@ This is some logo work for my teams exported as React Components.
 - Move to lerna/docusaurus
   - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
   - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)
-  - reproduce legacy site (local)
+  - [x] reproduce legacy site (local)
   - move master to main
-  - lerna init
-  - docusaurus for site package
+  - [x] lerna init
+  - [x] docusaurus for site package
+    - configure / style from iris experiment
+    - replace some of my pages from legacy
+    - cleanup initial pages
   - extract old components from legacy and put in separate packages folder
   - remove legacy
 
