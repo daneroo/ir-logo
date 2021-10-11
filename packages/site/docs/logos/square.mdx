@@ -1,0 +1,38 @@
+---
+sidebar_position: 5
+---
+
+# Square
+
+import { Square } from '../../src/components/logos/square';
+import { styles } from '../../src/components/logos/colors';
+const size=256;
+
+## Just some `<svg />` squares
+
+<svg width={size} height={size}>
+  <g transform={`translate(${size/2},${size/2})`} >
+    <Square />
+  </g>
+</svg>
+
+## Now with style
+
+<svg width={size} height={size}>
+  <g transform={`translate(${size/2},${size/2})`} >
+    <Square S={styles.purple}/>
+  </g>
+</svg>
+
+<svg width={size} height={size}>
+  <g transform={`translate(${size/2},${size/2})`} >
+    <Square S={styles.green}/>
+  </g>
+</svg>
+
+<svg width={size} height={size}>
+  <g transform={`translate(${size/2},${size/2})`} >
+    <Square S={styles.purple}/>
+    <Square S={styles.green} T='scale(.33)'/>
+  </g>
+</svg>

@@ -1,0 +1,94 @@
+---
+sidebar_position: 3
+---
+
+# Legacy
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+import irdetoPurpleUrl from '@site/static/img/irdeto_logos/png/irdeto_logo_rgb-purple.png';
+const padAndFLow={display: 'inline-block', padding: '1em'}
+const size={width:'200px'}
+
+import irdetoWhiteUrl from '@site/static/img/irdeto_logos/png/irdeto_logo_rgb-white.png';
+
+import He3Png from '@site/static/img/Helium/Helium-256.png'
+import He3SansPng from '@site/static/img/Helium/Helium.sans-256.png'
+import He4Png from '@site/static/img/Helium/Helium4-256.png'
+import He4SansPng from '@site/static/img/Helium/Helium4.sans-256.png'
+
+import XRobotSVG from '@site/static/img/XRobot/XRobot.svg'
+
+
+The previous incarnations of these logos were authored directly in SVG.
+
+## XRobot 
+
+Expandable Robot
+
+<div>
+  SVG as a component: <br />
+  <XRobotSVG title="XRobot" />
+
+  SVG as an `img` tag: <br />
+  <div>
+    <img style={size} src={useBaseUrl('img/XRobot/XRobot.svg')} alt="Xrobot" />
+    <img style={size} src={useBaseUrl('img/XRobot/XRobot.full.svg')} alt="XRobot Full" />
+    <img style={size} src={useBaseUrl('img/XRobot/XRobot.stick.svg')} alt="XRobot Stick" />
+  </div>
+</div>
+
+## Helium 
+
+Tracemark Traitor Tracing
+
+<table>
+  <tr>
+    <td>
+      Looks like a <b>Watermark</b> <br/>
+      <img style={size} src={He3SansPng} alt="He3.sans" />
+    </td>
+    <td>
+      Feels like a <b>Job Queue</b> <br/>
+      <img style={size} src={He3Png} alt="He3" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Another Variant <br/>
+      <img style={size} src={He4SansPng} alt="He4.sans" />
+    </td>
+    <td>
+      Another isotope <sup>4</sup>He <br/>
+      <img style={size} src={He3Png} alt="He4" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      As SVG <br/>
+      <img style={size} src={useBaseUrl('img/Helium/Helium.sans.svg')} alt="He.sans" />
+    </td>
+    <td>
+      As SVG <br/>
+      <img style={size} src={useBaseUrl('img/Helium/Helium.svg')} alt="He" />
+    </td>
+  </tr>
+</table>
+
+
+## PSaaS 
+
+Platform Stack as a Service
+
+<div>
+  <img style={size} src={useBaseUrl('img/PSaaS/PSaaS.svg')} alt="PSaaS" />
+  <img style={size} src={useBaseUrl('img/PSaaS/PSaaS.sans.svg')} alt="PSaaS.sans" />
+</div>
+
+
+## Irdeto
+<div style={{...padAndFLow, backgroundColor:'white'}}>
+  <div style={{...padAndFLow, backgroundColor:'white'}}>
+    <span><img style={{width:100}} src={irdetoPurpleUrl} alt="Irdeto Logo" /></span>
+  </div>
+</div>

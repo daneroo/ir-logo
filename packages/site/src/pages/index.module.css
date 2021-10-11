@@ -8,16 +8,26 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-image: linear-gradient(
+    /* to bottom right, */
+    45deg,
+    #341f69,
+    #49236b,
+    #5b286c,
+    #6b2f6d,
+    #79366e,
+    #8c3b6d,
+    #9d416c,
+    #ac4969,
+    #c05360,
+    #cf6254,
+    #d77548,
+    #d98a3d
+  );
 }
 
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

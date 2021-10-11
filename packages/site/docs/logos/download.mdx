@@ -1,0 +1,19 @@
+---
+sidebar_position: 2
+---
+
+# Download
+
+import Download from '../../src/components/logos/download';
+
+_Select a size, and Click on Download button below to try it._
+
+This is how we rasterize:
+- The SVG is rendered as a React component
+- The innerHTML of the component is fetched
+- Content is transform into a base64 encoded [data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- Create a new DOM Image: `<img src=""data:image/svg+xml;base64,PHN2ZyA..."`
+- Re-render image into a canvas.
+- Dowload is triggerd with a clik event.
+
+<Download size={512}/>

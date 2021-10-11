@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <title>Helium Logo</title>
+  <!--
+    Irdeto Purple  HEX #5D176A  RGB 93R.23G.106B
+    Irdeto Green   HEX #AEBF1E  RGB 174R.191G.30B
+
+    DONE(daneroo): 
+      - make layer a projection: (square, 45 deg rot, scale to match upper 120 deg of hexagon)
+      - clippath for hidden surface removal, tested with non white bg.
+      - preserve transparency in stack
+      - 3 layers is better visually
+
+  -->
+  <style>
+    .purple {
+      fill:none;
+      stroke: #5D176A;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .whitemask {
+      fill:#fff;
+      stroke: #eee;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .blackmask {
+      fill:#000;
+      stroke: #000;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .green {
+      fill:#AEBF1E;
+      /*
+      stroke: #AEBF1E;
+      stroke-width:10px; 
+      stroke-linejoin:round;
+      */
+    }
+    #hex {
+      fill:none;
+      stroke-linejoin:round;
+      stroke-width:2px;
+    }
+    #outline {
+     /* 
+      fill: #ccc; 
+     */
+      fill:none; 
+      stroke-width: 0px;
+      stroke: #ccc;
+    }
+    .dropshadow {
+      stroke: #777;
+    }
+    .wholehex {
+      stroke: #fff;
+    }
+    .lefthex {
+      stroke: #eee;
+    }
+  </style>
+  <defs>
+    <filter id="dropshadow" x="-100%" y="-100%" width="250%" height="250%">
+      <feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+
+    <polygon id="square" points="-100,100, 100,100, 100,-100, -100,-100"/>
+
+    <!-- projected square: matches outer hexagon-->
+    <g id= "losange" transform="scale(.707) scale(.866,.5) rotate(45)" >
+      <use xlink:href="#square"/>
+    </g>
+
+    <mask id="mask">
+      <!-- 100% opacity on layer being drawn (including fill) -->
+      <use xlink:href="#losange" class="whitemask"/>
+      <!-- 0% opacity on layer being removed (copy of itself shifted up by 40px) -->
+      <use xlink:href="#losange" transform="translate(0,-40)" class="blackmask"/>
+    </mask>
+
+      <!-- <rect x="-75" y="-60" width="150" height="50" stroke='red' fill="white"/> -->
+
+    <polygon id="hex" points="0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50"/>
+  </defs>
+
+
+
+<g id="outline" transform="translate(256,256) scale(2.56)" >
+  <use xlink:href="#square"/>
+</g>
+
+<g transform="translate(256,230) rotate(90)" >
+
+  <g id="hexComposed" transform="scale(2.0)" >
+    <use xlink:href="#hex" class="dropshadow" filter="url(#dropshadow)" />
+    <use xlink:href="#hex" class="wholehex"  />
+    <clipPath id="lefthalf">
+      <rect x="-120" y="-120" width="120" height="240" />
+    </clipPath>
+    <use xlink:href="#hex" class="lefthex" clip-path="url(#lefthalf)" />
+  </g>
+
+  <!-- bottom up -->
+  <g transform="scale(1.5)" >
+    <g transform="translate(0,50)" >
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <!--3 layers-->
+    <g transform="translate(0,0)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <!--4 layers-->
+    <!--<g transform="translate(0,16.66)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>
+    <g transform="translate(0,-16.66)">
+      <use xlink:href="#losange" class="purple" mask="url(#mask)"/>
+    </g>-->
+    <g transform="translate(0, -50)" >
+      <use xlink:href="#losange" class="purple" />
+      <use xlink:href="#losange" class="green" transform="scale(.33)"/>
+    </g>
+  </g>
+
+</g>
+
+<g id="Helium" transform="translate(256,470) scale(2)">
+  <text font-family="monospace" font-size="40" text-anchor="middle">He</text>
+  <text font-family="monospace" x="-27" y="-18" font-size="10" text-anchor="end" fill="#777">2</text>
+  <text font-family="monospace" x="-26" y="2" font-size="10" text-anchor="end" fill="#777">4.0026</text>
+  <text font-family="monospace" x="22" y="-18" font-size="10" text-anchor="start" fill="#777">1s<tspan font-size="7" baseline-shift="super">2</tspan></text>
+
+  <!--<text font-family="monospace" x="34" y="-4" font-size="20" text-anchor="start" fill="#777">helium</text>-->
+  <!--<text font-family="monospace" x="0" y="12" font-size="14" text-anchor="middle" fill="#777">helium</text>-->
+  <!--<text font-family="monospace" x="24" y="2" font-size="10" text-anchor="start" fill="#777">helium</text>-->
+</g>
+
+</svg>

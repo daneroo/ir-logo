@@ -6,14 +6,26 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+
+    /* My primary with irdeto purple: 5d176a 
+    See https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
+    */
+    --ifm-color-primary: #5d176a;
+    --ifm-color-primary-dark: #54155f;
+    --ifm-color-primary-darker: #4f145a;
+    --ifm-color-primary-darkest: #41104a;
+    --ifm-color-primary-light: #661975;
+    --ifm-color-primary-lighter: #6b1a7a;
+    --ifm-color-primary-lightest: #791e8a;
+
+    --ifm-color-primary: #9d468f;
+    --ifm-color-primary-dark: #8d3f81;
+    --ifm-color-primary-darker: #853b7a;
+    --ifm-color-primary-darkest: #6e3164;
+    --ifm-color-primary-light: #ad4d9d;
+    --ifm-color-primary-lighter: #b253a3;
+    --ifm-color-primary-lightest: #bd6aaf;
+    
 }
 
 .docusaurus-highlight-code-line {
@@ -25,4 +37,24 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Change the navbar bg to match iris academy */
+/* Implies setting */
+nav.navbar {
+  background-image: linear-gradient(
+    to right,
+    #341f69,
+    #49236b,
+    #5b286c,
+    #6b2f6d,
+    #79366e,
+    #8c3b6d,
+    #9d416c,
+    #ac4969,
+    #c05360,
+    #cf6254,
+    #d77548,
+    #d98a3d
+  );
 }
