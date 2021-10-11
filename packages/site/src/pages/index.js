@@ -2,8 +2,8 @@ import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
-import Image from '@theme/IdealImage'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 
@@ -30,13 +30,13 @@ function HomepageHeader () {
     >
       <div className={clsx('container', styles.containerFlex)}>
         <div className='left'>
-          <Image className={styles.heroLeftImage} min={50} max={400} img={thumbnail} />
+          <img style={{width:'200px'}} src={useBaseUrl('img/Iris/iris-versicolor-logo-400.svg')} alt="Xrobot" />
         </div>
         <div className='right'>
           <h1 className='hero__title'>{siteConfig.title}</h1>
           <p className='hero__subtitle'>{siteConfig.tagline}</p>
         </div>
-        </div>
+      </div>
     </header>
   )
 }

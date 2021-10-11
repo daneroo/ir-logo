@@ -11,10 +11,6 @@
    gap: var(--ifm-spacing-horizontal)
  }
 
-.heroLeftImage {
-  height: 200px;
-  width: 200px;
-}
 .heroBanner {
   padding: 4rem 0;
   text-align: center;

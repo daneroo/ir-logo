@@ -27,3 +27,5 @@ export const styles = {
 }
 
 export const reactBlue = '#61dafb'
+
+export default {irdetoGreen, irdetoPurple, reactBlue, styles}

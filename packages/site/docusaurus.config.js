@@ -37,10 +37,7 @@ const config = {
       })
     ]
   ],
-  plugins: [
-    '@docusaurus/theme-live-codeblock',
-    '@docusaurus/plugin-ideal-image'
-  ],
+  plugins: ['@docusaurus/theme-live-codeblock'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
