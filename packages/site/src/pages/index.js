@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
+import { Iris } from '../components/logos/iris';
 
 // import thumbnail from "@site/static/img/Iris/Iris_versicolor_5835374590.jpeg";
 import thumbnail from '@site/static/img/Iris/Iris_versicolor_3.jpeg'
@@ -24,13 +25,14 @@ function HomepageHeader () {
         // backgroundImage: `url(img/Iris/Iris_versicolor_Quebec_2.jpeg)`,
         // backgroundImage: `linear-gradient(to right, rgba(0,0,0, 0.0),rgba(0,0,0, 0.6),rgba(0,0,0, 0.0)),url(img/Iris/Iris_versicolor_Quebec_2.jpeg)`,
         // backgroundImage: `linear-gradient(to right, rgba(0,0,0, 0.0),rgba(0,0,0, 0.6),rgba(0,0,0, 0.3)),url(img/Iris/Iris_versicolor_Quebec_2-crop-left.jpeg)`,
-        backgroundImage: 'linear-gradient(to right, rgba(0,0,0, 0.6),rgba(0,0,0, 0.6),rgba(0,0,0, 0.0)),url(img/Iris/Iris_versicolor_Quebec_2-crop-right.jpeg)'
+        backgroundImage: 'linear-gradient(to right, rgba(128,128,128, .5),rgba(0,0,0, 0.6),rgba(0,0,0, 0.0)),url(img/Iris/Iris_versicolor_Quebec_2-crop-right.jpeg)'
 
       }}
     >
       <div className={clsx('container', styles.containerFlex)}>
         <div className='left'>
-          <img style={{width:'200px'}} src={useBaseUrl('img/Iris/iris-versicolor-logo-400.svg')} alt="Xrobot" />
+          <Iris size={200} />
+          {/* <img style={{width:'200px'}} src={useBaseUrl('img/Iris/iris-versicolor-logo-400.svg')} alt="Xrobot" /> */}
         </div>
         <div className='right'>
           <h1 className='hero__title'>{siteConfig.title}</h1>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 
-import XRobot from './xrobot'
+// import XRobot from './xrobot'
+import Iris from './iris'
 
 export const Download = ({ size = 512, initialRenderSize = 256 }) => {
   const [renderSize, setRenderSize] = useState(initialRenderSize)
 
   function download (dataURI, size) {
-    const svgname = 'XRobot.svg'
+    const svgname = 'Iris.svg'
     const pngname = svgname.replace('.svg', '-' + size + '.png')
 
     //  make an new image from the svg (must set both width and height)
@@ -77,7 +78,7 @@ height="${renderSize}" width="${renderSize}">
 
   return (
     <div style={{ display: 'inline-block' }}>
-      <XRobot size={size} />
+      <Iris size={size} />
       <br />
       <div style={{ textAlign: 'center' }}>
         <select value={renderSize} onChange={selectSize}>
