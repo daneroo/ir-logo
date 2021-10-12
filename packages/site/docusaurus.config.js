@@ -47,8 +47,7 @@ const config = {
         title: 'Team Logos',
         logo: {
           alt: 'Irdeto Logo',
-          // src: 'img/irdeto_logo_rgb-purple.png',
-          src: 'img/irdeto_logo_rgb-white.png'
+          src: 'img/irdeto-logo-white.svg'          
         },
         items: [
           {
