@@ -1,6 +1,7 @@
 # ir-logo
 
 <!-- Badges -->
+
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
@@ -11,6 +12,7 @@ This is some logo work for my teams exported as React Components.
 
 - Make an IRIS logo - fine tune styling, make bg transparent for png
 - Move to lerna/docusaurus
+
   - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
   - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)
   - [x] reproduce legacy site (local)
@@ -70,14 +72,14 @@ lerna publish
 
 # less typical
 lerna version # interactive
-lerna minor # [major | minor | patch | premajor | preminor | prepatch | prerelease]
+lerna minor # [major | minor | patch ]
 
 lerna clean --yes # rm node_modules
 ```
 
 ## Creating a new package
 
-After you create the package, add `scripts:`, `devDependencies:`, and `standrad:`
+After you create the package, add `scripts:`, `devDependencies:`, and `standard:`
 sections to `package.json`
 
 ```bash
@@ -86,9 +88,9 @@ lerna create @daneroo/ir-logo-helium ir-logo-helium
 # and add common devDeps as below
 ```
 
-## Adding (shared) dev dependancies
+## Adding (shared) dev dependencies
 
-If it is a peerDependancy, add by hand, and add as a devdependancy
+If it is a peer dependency, add by hand, and add as a dev dependency
 
 ```bash
 lerna add jest --dev
@@ -107,7 +109,6 @@ See [my first lerna try with foundations](https://github.com/daneroo/foundations
 ```bash
 npx lerna init
 ```
-
 
 ## History
 
