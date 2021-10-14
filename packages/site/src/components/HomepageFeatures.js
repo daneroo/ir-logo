@@ -4,7 +4,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 import styles from './HomepageFeatures.module.css'
 
-
 const FeatureList = [
   {
     title: 'Platform Stack as a Service',

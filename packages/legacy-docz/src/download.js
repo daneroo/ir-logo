@@ -25,7 +25,9 @@ export const Download = ({ size = 512, initialRenderSize = 256 }) => {
 
       var a = document.createElement('a')
       a.download = pngname
-      a.href = can.toDataURL('image/png').replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+      a.href = can
+        .toDataURL('image/png')
+        .replace(/^data:image\/[^;]/, 'data:application/octet-stream')
       a.click()
     }
   }
@@ -83,9 +85,9 @@ height="${renderSize}" width="${renderSize}">
         <select value={renderSize} onChange={selectSize}>
           {[5, 6, 7, 8, 9, 10].map(i => {
             return <option key={i} value={1 << i}>{`${1 << i}px`}</option>
-          }) }
+          })}
         </select>
-        <button onClick={rasterize} >Download</button>
+        <button onClick={rasterize}>Download</button>
       </div>
     </div>
   )

@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "unit": "echo jest is not configured properly yet",
+    "lint": "standard",
+    "test": "npm run lint && CI=true npm run unit",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -37,5 +40,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": "prettier-config-standard",
+  "devDependencies": {
+    "standard": "^16.0.4"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
   }
 }

@@ -6,26 +6,33 @@
 
 /* You can override the default Infima variables here. */
 :root {
-
-    /* My primary with irdeto purple: 5d176a 
+  /* My primary with irdeto purple: 5d176a 
     See https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
     */
-    --ifm-color-primary: #5d176a;
-    --ifm-color-primary-dark: #54155f;
-    --ifm-color-primary-darker: #4f145a;
-    --ifm-color-primary-darkest: #41104a;
-    --ifm-color-primary-light: #661975;
-    --ifm-color-primary-lighter: #6b1a7a;
-    --ifm-color-primary-lightest: #791e8a;
+  --ifm-color-primary: #5d176a;
+  --ifm-color-primary-dark: #54155f;
+  --ifm-color-primary-darker: #4f145a;
+  --ifm-color-primary-darkest: #41104a;
+  --ifm-color-primary-light: #661975;
+  --ifm-color-primary-lighter: #6b1a7a;
+  --ifm-color-primary-lightest: #791e8a;
 
-    --ifm-color-primary: #9d468f;
-    --ifm-color-primary-dark: #8d3f81;
-    --ifm-color-primary-darker: #853b7a;
-    --ifm-color-primary-darkest: #6e3164;
-    --ifm-color-primary-light: #ad4d9d;
-    --ifm-color-primary-lighter: #b253a3;
-    --ifm-color-primary-lightest: #bd6aaf;
-    
+  --ifm-color-primary: #9d468f;
+  --ifm-color-primary-dark: #8d3f81;
+  --ifm-color-primary-darker: #853b7a;
+  --ifm-color-primary-darkest: #6e3164;
+  --ifm-color-primary-light: #ad4d9d;
+  --ifm-color-primary-lighter: #b253a3;
+  --ifm-color-primary-lightest: #bd6aaf;
+}
+
+.navbar__title:hover {
+  color: #ccc;
+}
+
+.navbar--dark {
+  --ifm-navbar-link-color: #ccc;
+  --ifm-navbar-link-hover-color: #ccc;
 }
 
 .navbar__logo {

@@ -1,15 +1,10 @@
 import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
-import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
-import { Iris } from '../components/logos/iris';
-
-// import thumbnail from "@site/static/img/Iris/Iris_versicolor_5835374590.jpeg";
-import thumbnail from '@site/static/img/Iris/Iris_versicolor_3.jpeg'
+import { Iris } from '../components/logos/iris'
 
 function HomepageHeader () {
   const { siteConfig } = useDocusaurusContext()
@@ -17,8 +12,8 @@ function HomepageHeader () {
     <header
       className={clsx('hero hero--primary', styles.heroBanner)}
       // can't figure out how to get bg image url in css module, so here it is as a style prop
-        // https://css-tricks.com/tinted-images-multiple-backgrounds/
-        style={{
+      // https://css-tricks.com/tinted-images-multiple-backgrounds/
+      style={{
         // backgroundImage: `url(img/Iris/Iris_versicolor_3.jpeg)`,
         // backgroundImage: `url(img/Iris/Iris_versicolor_Quebec_2-crop-right.jpeg)`,
         // backgroundImage: `url(img/Iris/Iris_versicolor_Quebec_2-crop-left.jpeg)`,
