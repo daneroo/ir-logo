@@ -20,7 +20,7 @@ function HomepageHeader () {
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
         </div>
-        <div className="hero__imageright">
+        <div className="hero__image_right">
           <img
             style={{ width: '300px' }}
             src={useBaseUrl('img/Iris/Iris_versicolor_3-alpha.png')}

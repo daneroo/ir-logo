@@ -39,12 +39,12 @@ export const Iris = ({ size = 256 }) => (
   <svg width={size} height={size} style={{ border: '0px solid red' }}>
     <defs>
       <linearGradient id="petal-gradient" x1="0" y1="0" x2="0" y2=".8">
-        <stop stop-color={irdetoGreen} offset="30%" />
-        <stop stop-color={darkGreen} offset="90%" />
+        <stop stopColor={irdetoGreen} offset="30%" />
+        <stop stopColor={darkGreen} offset="90%" />
       </linearGradient>
       <linearGradient id="sepal-gradient" x1="0" y1="0" x2="0" y2=".8">
-        <stop stop-color={lightPurple} offset="0%" />
-        <stop stop-color={irdetoPurple} offset="30%" />
+        <stop stopColor={lightPurple} offset="0%" />
+        <stop stopColor={irdetoPurple} offset="30%" />
       </linearGradient>
     </defs>
 

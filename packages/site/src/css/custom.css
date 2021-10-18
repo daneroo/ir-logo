@@ -8,7 +8,6 @@
 :root {
   /* My primary with irdeto purple: 5d176a 
     See https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
-    */
   --ifm-color-primary: #5d176a;
   --ifm-color-primary-dark: #54155f;
   --ifm-color-primary-darker: #4f145a;
@@ -16,7 +15,9 @@
   --ifm-color-primary-light: #661975;
   --ifm-color-primary-lighter: #6b1a7a;
   --ifm-color-primary-lightest: #791e8a;
+    */
 
+  /* ligher purple */
   --ifm-color-primary: #9d468f;
   --ifm-color-primary-dark: #8d3f81;
   --ifm-color-primary-darker: #853b7a;
@@ -24,15 +25,6 @@
   --ifm-color-primary-light: #ad4d9d;
   --ifm-color-primary-lighter: #b253a3;
   --ifm-color-primary-lightest: #bd6aaf;
-}
-
-.navbar__title:hover {
-  color: #ccc;
-}
-
-.navbar--dark {
-  --ifm-navbar-link-color: #ccc;
-  --ifm-navbar-link-hover-color: #ccc;
 }
 
 .navbar__logo {
@@ -50,27 +42,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Change the navbar bg to match iris academy */
-/* Implies setting */
-nav.navbar {
-  background-image: linear-gradient(
-    to right,
-    #341f69,
-    #49236b,
-    #5b286c,
-    #6b2f6d,
-    #79366e,
-    #8c3b6d,
-    #9d416c,
-    #ac4969,
-    #c05360,
-    #cf6254,
-    #d77548,
-    #d98a3d
-  );
-}
 @media (max-width: 996px) {
-  .hero__imageright {
+  .hero__image_right {
     display: none;
   }
 }

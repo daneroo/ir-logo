@@ -16,6 +16,9 @@ const config = {
   organizationName: 'irdeto', // Usually your GitHub org/user name.
   projectName: 'ir-logo-site', // Usually your repo name.
 
+  // added this to get Material Icon Font
+  stylesheets: ['https://fonts.googleapis.com/icon?family=Material+Icons'],
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -41,13 +44,29 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        respectPrefersColorScheme: true,
+        // Need Material Icon Font in stylesheet section above
+        switchConfig: {
+          darkIcon: 'light_mode',
+          darkIconStyle: {
+            fontFamily: 'Material Icons'
+          },
+          lightIcon: 'dark_mode',
+          lightIconStyle: {
+            color: 'white', // for better contrast
+            fontFamily: 'Material Icons'
+          }
+        }
+      },
+
       navbar: {
-        // style: 'primary',
-        style: 'dark', // because of our navbar background
         title: 'Team Logos',
         logo: {
           alt: 'Irdeto Logo',
-          src: 'img/irdeto-logo-white.svg'
+          src: 'img/irdeto-logo-purple.svg',
+          srcDark: 'img/irdeto-logo-white.svg'
         },
         items: [
           {
