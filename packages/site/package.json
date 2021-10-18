@@ -43,6 +43,7 @@
   },
   "prettier": "prettier-config-standard",
   "devDependencies": {
+    "prettier-config-standard": "^4.0.0",
     "standard": "^16.0.4"
   },
   "standard": {

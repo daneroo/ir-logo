@@ -69,3 +69,8 @@ nav.navbar {
     #d98a3d
   );
 }
+@media (max-width: 996px) {
+  .hero__imageright {
+    display: none;
+  }
+}
