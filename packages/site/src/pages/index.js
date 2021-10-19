@@ -6,7 +6,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 import { Iris } from '../components/logos/iris'
-import { irdetoPurple, irdetoGreen } from '../../src/components/logos/colors'
 
 function HomepageHeader () {
   const { siteConfig } = useDocusaurusContext()

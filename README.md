@@ -24,7 +24,10 @@ This is some logo work for my teams exported as React Components.
     - [x] cleanup initial pages
   - extract old components from legacy and put in separate packages folder
     - actually, removing docz stuff from legacy, makes it publishable?
-  - remove legacy
+    - [ ] move to separate packages
+      - [ ] [tsdx.io](https://tsdx.io)
+      - [ ] [microbundle](https://github.com/developit/microbundle)
+  - remove legacy (after tests pass)
 
 - Republish npm package and docz site as is node:v11.4 (netlify)
   - Update node:v12
