@@ -75,8 +75,7 @@ const config = {
             position: 'left',
             label: 'Docs'
           },
-          // Blog just hidden in nav bar for now
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'News', position: 'left' },
           {
             href: 'https://github.com/daneroo/ir-logo',
             label: 'GitHub',
