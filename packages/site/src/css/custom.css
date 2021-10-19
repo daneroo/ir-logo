@@ -28,7 +28,8 @@
 }
 
 .navbar__logo {
-  height: 160%; /* default in theme is 100%; this is for the irdeto logo SVG*/
+  /* default in theme is 2rem; this is for the irdeto logo SVG */
+  height: 3rem;
 }
 
 .docusaurus-highlight-code-line {
