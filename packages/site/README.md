@@ -1,6 +1,6 @@
 # ir-logo site
 
-- [ ] publish to netlify
+- [x] published to netlify on push (set bas directory to `packages/site`)
 - [ ] publish to vercel
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.

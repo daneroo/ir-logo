@@ -16,14 +16,14 @@ function HomepageHeader () {
           <Iris size={200} />
         </div>
         <div>
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className='hero__title'>{siteConfig.title}</h1>
+          <p className='hero__subtitle'>{siteConfig.tagline}</p>
         </div>
-        <div className="hero__image_right">
+        <div className='hero__image_right'>
           <img
             style={{ width: '300px' }}
             src={useBaseUrl('img/Iris/Iris_versicolor_3-alpha.png')}
-            alt="Xrobot"
+            alt='Xrobot'
           />
         </div>
       </div>
@@ -36,7 +36,8 @@ export default function Home () {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />">
+      description='Description will go into a meta tag in <head />'
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
