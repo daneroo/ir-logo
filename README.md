@@ -119,6 +119,6 @@ npx lerna init
 - 2017-02-03 Helium site - static html/svg (materialize.css): was deployed originally to <https://logo.he.ir-si.com/>, and then to <https://helium-logo.netlify.com/>
   - is in the root (`\`) of [this repo](https://gitlab.com/daneroo/helium-xrobot-logo)
   - will move back to github/daneroo/helium-logo
-- 2018-12-12 XRobot - eXtensible Robot - Team name for LSA Work. originaly in a gatsby site in helium-logo/xrobot
+- 2018-12-12 XRobot - eXtensible Robot - Team name for LSA Work. originally in a gatsby site in helium-logo/xrobot
 - 2018-12-14 Started consolidating every thing into ir-logo (this repo) as a npm module for a react component, as well as a docz site.
 - 2021-10-10 Move to lerna and docusaurus
