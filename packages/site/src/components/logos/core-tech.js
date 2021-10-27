@@ -21,7 +21,7 @@ function steps (start, end, step) {
     (_ignore, i) => start + i * step
   )
 }
-export const CoreTech = ({ size = 256, variant = 'torus' }) => (
+export const CoreTech = ({ size = 256, variant = 'swirl' }) => (
   <svg width={size} height={size} style={{ border: '0px solid red' }}>
     <g transform={`scale(${size / 512})`}>
       <g transform="translate(256, 256) scale (1,-1)">
@@ -61,6 +61,18 @@ const TriangleTop = ({ S = {}, T = '', variant = 'torus' }) => (
           <path d="M 0,150 L 0,100 L 8,100 Z" />
           <path d="M 0,150 L -16,250 L 0,250 Z" />
         </>
+      )}
+
+      {variant === 'swirl' && (
+        <path
+          d="M 0 100 
+             A  8 45 0 1 1   0 250
+               10 30 0 1 0  0 100 
+             z"
+          // stroke="black"
+          // stroke-width="2"
+          // fill="red"
+        />
       )}
     </g>
   </g>
