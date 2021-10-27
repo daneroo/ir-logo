@@ -6,7 +6,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 import { Iris } from '../components/logos/iris'
-import { CoreTech } from '../components/logos/core-tech'
 
 function HomepageHeader () {
   const { siteConfig } = useDocusaurusContext()
@@ -14,19 +13,18 @@ function HomepageHeader () {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className={clsx('container', styles.containerFlex)}>
         <div>
-          <CoreTech size={200} />
+          <Iris size={200} />
         </div>
         <div>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
         </div>
         <div className="hero__image_right">
-          <Iris size={200} />
-          {/* <img
+          <img
             style={{ width: '300px' }}
             src={useBaseUrl('img/Iris/Iris_versicolor_3-alpha.png')}
             alt="Xrobot"
-          /> */}
+          />
         </div>
       </div>
     </header>
