@@ -10,8 +10,10 @@ This is some logo work for my teams exported as React Components.
 
 ## TODO
 
-- Make an IRIS logo - fine tune styling, make bg transparent for png
-- Move to lerna/docusaurus
+- Move to nx/next.js/nextra
+- [x] Make an Core Tech Logo
+- [x] Make an IRIS logo - fine tune styling, make bg transparent for png
+- Move to lerna
 
   - [Docusaurus is using lerna](https://docusaurus.io/blog/2019/12/30/docusaurus-2019-recap)
   - [Blog article pn lerna+docusaurus](https://morioh.com/p/0ce1f859accb)

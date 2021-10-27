@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 
 // import XRobot from './xrobot'
 import Iris from './iris'
+import CoreTech from './core-tech'
 
 export const Download = ({ size = 512, initialRenderSize = 256 }) => {
   const [renderSize, setRenderSize] = useState(initialRenderSize)
 
   function download (dataURI, size) {
-    const svgname = 'Iris.svg'
+    // const svgname = 'Iris.svg'
+    const svgname = 'CoreTech.svg'
     const pngname = svgname.replace('.svg', '-' + size + '.png')
 
     //  make an new image from the svg (must set both width and height)
@@ -26,7 +28,9 @@ export const Download = ({ size = 512, initialRenderSize = 256 }) => {
 
       const a = document.createElement('a')
       a.download = pngname
-      a.href = can.toDataURL('image/png').replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+      a.href = can
+        .toDataURL('image/png')
+        .replace(/^data:image\/[^;]/, 'data:application/octet-stream')
       a.click()
     }
   }
@@ -78,11 +82,11 @@ height="${renderSize}" width="${renderSize}">
 
   return (
     <div style={{ display: 'inline-block' }}>
-      <Iris size={size} />
+      <CoreTech variant="double" size={size} />
       <br />
       <div style={{ textAlign: 'center' }}>
         <select value={renderSize} onChange={selectSize}>
-          {[5, 6, 7, 8, 9, 10].map(i => {
+          {[5, 6, 7, 8, 9, 10].map((i) => {
             return <option key={i} value={1 << i}>{`${1 << i}px`}</option>
           })}
         </select>

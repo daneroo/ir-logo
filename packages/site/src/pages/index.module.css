@@ -9,7 +9,7 @@
   align-items: center;
   align-content: space-between;
   /* gap: var(--ifm-spacing-horizontal) */
-  gap: 3em;
+  gap: 5em;
 }
 
 .heroBanner {
