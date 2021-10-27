@@ -82,7 +82,7 @@ height="${renderSize}" width="${renderSize}">
 
   return (
     <div style={{ display: 'inline-block' }}>
-      <CoreTech variant="double" size={size} />
+      <CoreTech variant="torus" size={size} />
       <br />
       <div style={{ textAlign: 'center' }}>
         <select value={renderSize} onChange={selectSize}>

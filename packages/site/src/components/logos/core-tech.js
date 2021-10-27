@@ -30,7 +30,7 @@ export const CoreTech = ({ size = 256, variant = 'torus' }) => (
           <TriangleTop
             key={angle}
             S={styles.triangle}
-            T={`scale(${(angle + 360) % 30 < 15 ? 0.9 : 1})rotate(${angle})`}
+            // T={`scale(${(angle + 360) % 30 < 15 ? 0.9 : 1})rotate(${angle})`}
             T={`rotate(${angle})`}
             variant={variant}
           />
