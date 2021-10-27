@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // import XRobot from './xrobot'
-import Iris from './iris'
+// import Iris from './iris'
 import CoreTech from './core-tech'
 
 export const Download = ({ size = 512, initialRenderSize = 256 }) => {
@@ -82,7 +82,7 @@ height="${renderSize}" width="${renderSize}">
 
   return (
     <div style={{ display: 'inline-block' }}>
-      <CoreTech variant="torus" size={size} />
+      <CoreTech variant="swirl" size={size} />
       <br />
       <div style={{ textAlign: 'center' }}>
         <select value={renderSize} onChange={selectSize}>

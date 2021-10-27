@@ -8,18 +8,69 @@ import { CoreTech } from '../../src/components/logos/core-tech'
 import { styles } from '../../src/components/logos/colors'
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import { useState } from 'react'
+const flexV = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '2rem'
+}
+const flexH = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '2rem'
+}
 const styleSize = { width: '320px' }
+
 const size = 400
+
+export const CoreSelector = ({ size = 256 }) => {
+  // const [count, setCount] = useState(0)
+  const variants = ['swirl', 'simple', 'double', 'torus']
+  const [variant, setVariant] = useState(variants[0])
+  function next (direction = 1) {
+    const index = variants.indexOf(variant)
+    const nextIndex = (index + direction + variants.length) % variants.length
+    setVariant(variants[nextIndex])
+  }
+  return (
+    <div style={flexV}>
+      <CoreTech size={size} variant={variant} />
+      <div style={flexH}>
+        <button onClick={() => next(-1)}> Prev </button>
+        <label for="variant">Variant:</label>
+        <select name="variant" onChange={(e) => setVariant(e.target.value)}>
+          {variants.map((v, i) => (
+            <option key={i} value={v} selected={variant === v}>
+              {v}
+            </option>
+          ))}
+        </select>
+        <button onClick={() => next(1)}> Next </button>
+      </div>
+    </div>
+  )
+}
 
 ## Invoking my Core Tech component
 
-<CoreTech size={300} />
+<CoreSelector size={400} />
 
 ## Variants
 
-<CoreTech size={200} variant="simple" />
-<CoreTech size={200} variant="double" />
-<CoreTech size={200} variant="torus" />
+<div style={flexV}>
+  <div style={flexH}>
+    <CoreTech size={200} variant="swirl" />
+    <CoreTech size={200} variant="simple" />
+  </div>
+  <div style={flexH}>
+    <CoreTech size={200} variant="double" />
+    <CoreTech size={200} variant="torus" />
+  </div>
+</div>
 
 ## Inspiration
 
